@@ -16,7 +16,7 @@ const Category = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await fetch("http://localhost:3000/recipes");
+        const response = await fetch("http://localhost:4000/recipes");
         const data = await response.json();
         const filteredRecipes = data.filter(
           (recipe: Recipe) => recipe.category === categoryName

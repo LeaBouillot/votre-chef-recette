@@ -9,7 +9,7 @@ interface Recipe {
 }
 
 const SearchRecipe = () => {
-  const API_URL = "http://localhost:3000/recipes";
+  const API_URL = "http://localhost:4000/recipes";
 
   const [query, setQuery] = useState("");
   const [recipes, setRecipes] = useState<Recipe[]>([]);
@@ -58,7 +58,6 @@ const SearchRecipe = () => {
         <div className="liste-recipe">
           {filterRecipe.map((recipe) => (
             <div className="recipe" key={recipe.id}>
-
               <Link to={`/detail/${recipe.id}`}>
                 <h3 className="list-recipe-title">{recipe.title}</h3>
 
